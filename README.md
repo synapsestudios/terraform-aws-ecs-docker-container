@@ -1,13 +1,13 @@
 # AWS ECS Docker Container
 
-This module creates an AWS ECS compatible Docker container definition.
+This module creates an AWS ECS compatible Docker container definition for use with [synapsestudios/terraform-aws-ecs-deployment](https://github.com/synapsestudios/terraform-aws-ecs-deployment). This module has a many to one relationship with the ecs-deployment. This mean each deployment can have multiple containers and port mappings, useful for sidecar deployment scenarios.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.6 |
+| terraform | ~> 0.12.29 |
 | aws | ~> 2.53 |
 | template | ~> 2.1 |
 
