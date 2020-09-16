@@ -1,0 +1,15 @@
+[{
+    "name": ${name},
+    "image": ${image},
+    "cpu": ${cpu},
+    "memory": ${memory},
+    "essential": ${essential},
+    "dnsSearchDomains": ${dns_search_domains},
+    "logConfiguration": ${log_configuration},
+    "entryPoint": ${entrypoint},
+    "portMappings": ${port_mappings},
+    "command": ${command},
+    "linuxParameters": null,
+    "environment": ${env_variables},
+    "dockerLabels": ${labels}
+}]
