@@ -11,5 +11,6 @@
     "command": ${command},
     "linuxParameters": null,
     "environment": ${env_variables},
-    "dockerLabels": ${labels}
+    "dockerLabels": ${labels},
+    "secrets": ${secrets}
 }]

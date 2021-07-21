@@ -19,6 +19,12 @@ locals {
       value = lookup(var.env_variables, key)
     }
   ]
+  secrets = [for key in keys(var.secrets) :
+  {
+    name  = key
+    value = lookup(var.secrets, key)
+  }
+  ]
 }
 
 ######################
