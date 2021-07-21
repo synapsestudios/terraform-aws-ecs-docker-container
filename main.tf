@@ -52,5 +52,6 @@ data "template_file" "definition" {
     port_mappings      = jsonencode(var.port_mappings)
     env_variables      = jsonencode(local.env_variables)
     labels             = jsonencode(var.labels)
+    secrets            = jsonencode(local.secrets)
   }
 }
