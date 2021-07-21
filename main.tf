@@ -20,10 +20,10 @@ locals {
     }
   ]
   secrets = [for key in keys(var.secrets) :
-  {
-    name  = key
-    value = lookup(var.secrets, key)
-  }
+    {
+      name  = key
+      value = lookup(var.secrets, key)
+    }
   ]
 }
 
