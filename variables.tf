@@ -31,6 +31,12 @@ variable "env_variables" {
   default     = {}
 }
 
+variable "secrets" {
+  type        = map(string)
+  description = "(Optional) A key value pair mapping of secrets for the Docker container."
+  default     = {}
+}
+
 variable "port_mappings" {
   type        = list(object({ hostPort = number, containerPort = number, protocol = string }))
   description = "(Optional) A key value pair mapping of ports for the Docker container."
