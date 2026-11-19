@@ -9,14 +9,12 @@ This module creates an AWS ECS compatible Docker container definition for use wi
 |------|---------|
 | terraform | ~> 0.12.29 |
 | aws | ~> 2.53 |
-| template | ~> 2.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | aws | ~> 2.53 |
-| template | ~> 2.1 |
 
 ## Inputs
 
@@ -40,8 +38,8 @@ This module creates an AWS ECS compatible Docker container definition for use wi
 
 | Name | Description |
 |------|-------------|
-| definition | n/a |
-| name | n/a |
-| port\_mappings | n/a |
+| definition | Container definition. `rendered` holds the definition as a JSON array string, ready for an ECS task definition's `container_definitions`. |
+| name | Name of the Docker container. |
+| port\_mappings | Port mappings of the Docker container. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
