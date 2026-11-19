@@ -9,14 +9,12 @@ This module creates an AWS ECS compatible Docker container definition for use wi
 |------|---------|
 | terraform | ~> 0.12.29 |
 | aws | ~> 2.53 |
-| template | ~> 2.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | aws | ~> 2.53 |
-| template | ~> 2.1 |
 
 ## Inputs
 

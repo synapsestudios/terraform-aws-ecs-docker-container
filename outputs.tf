@@ -7,5 +7,7 @@ output "port_mappings" {
 }
 
 output "definition" {
-  value = data.template_file.definition
+  value = {
+    rendered = local.definition
+  }
 }

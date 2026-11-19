@@ -21,7 +21,7 @@ locals {
   ]
   secrets = [for key in keys(var.secrets) :
     {
-      name  = key
+      name      = key
       valueFrom = var.secrets[key]
     }
   ]
@@ -37,9 +37,8 @@ data "aws_region" "current" {}
 ############################
 # The following format functions below are a
 # workaround for: https://github.com/hashicorp/terraform/issues/23062#issuecomment-581261163
-data "template_file" "definition" {
-  template = file("${path.module}/definitions/template.json")
-  vars = {
+locals {
+  definition = templatefile("${path.module}/definitions/template.json", {
     name               = jsonencode(var.name)
     image              = jsonencode(var.image)
     cpu                = jsonencode(var.cpu)
@@ -53,5 +52,5 @@ data "template_file" "definition" {
     env_variables      = jsonencode(local.env_variables)
     labels             = jsonencode(var.labels)
     secrets            = jsonencode(local.secrets)
-  }
+  })
 }
